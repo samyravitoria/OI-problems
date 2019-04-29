@@ -40,12 +40,15 @@ ll solve(ll u, ll C, ll f)
 
 main()
 {
-	scanf("%lld %lld", &n, &k);
+	FILE *fin = fopen ("barnpainting.in", "r");
+	FILE *fout = fopen("barnpainting.out", "w");
+	
+	fscanf(fin, "%lld %lld", &n, &k);
 
 	for(ll i = 1 ; i < n ; ++i)
 	{
 		ll u, v;
-		scanf("%lld %lld", &u, &v);
+		fscanf(fin, "%lld %lld", &u, &v);
 
 		graph[u].push_back(v);
 		graph[v].push_back(u);
@@ -57,7 +60,7 @@ main()
 	for(ll i = 0 ; i < k ; ++i)
 	{
 		ll node;
-		scanf("%lld %lld", &node, &color[node]);
+		fscanf(fin, "%lld %lld", &node, &color[node]);
 	}
 	
 	ll rp = 0LL;
@@ -67,5 +70,5 @@ main()
 		for(ll i = 1 ; i <= 3 ; ++i) 
 			rp = (rp + solve(1LL, i, 0LL)%mod)%mod;
 	
-	printf("%lld\n", rp%mod);
+	fprintf(fout, "%lld\n", rp%mod);
 }
