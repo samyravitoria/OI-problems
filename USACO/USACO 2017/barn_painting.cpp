@@ -1,10 +1,10 @@
-// Barn Painting USACO 2017 December Contest, Gold
-// LINK: http://www.usaco.org/index.php?page=viewproblem2&cpid=769
+// USACO 2017 December Contest Gold - Barn Painting
+// Samyra Almeida
 
 #include <bits/stdc++.h>
 using namespace std;
-typedef long long ll;
 
+typedef long long ll;
 const ll maxn = 1e5+10, mod = 1e9+7;
 
 ll n, k;
