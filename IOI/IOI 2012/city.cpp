@@ -1,3 +1,6 @@
+// IOI 2012 - Ideal City
+// Samyra Almeida
+
 #include <bits/stdc++.h>
 
 using namespace std;
