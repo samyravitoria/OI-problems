@@ -2,7 +2,25 @@
   Solution by Samyra Almeida
   
   Note that each tank will move at most N² times (N movements in rows and N movements in columns).
-  
+  I divide the moviments in two tipes: in rows(X) and columns(Y). As we have N tanks, we'll have 
+  at maximum N³ moviments.
+  Some notes:
+    - m[][] = battlefield (grade).
+  In Rows:
+    - I will move from line 1 to N-1 and at each grid position if there is a tank in position (i, j) and 
+    position (i + 1, j) is empty and if there are more than i tanks in the first row i (to verify this, 
+    we will use a BIT where the query (i) = sum of the number of tanks of the first lines i of the grid) 
+    will move the tank to the position (i + 1, j) and I add movement to the resp vector and do movs++ 
+    (total number of moves). Otherwise, we do nothing and continue the algorithm. Let's repeat this 
+    algorithm N times as explained above.
+    - Let's run the same algorithm above but now from line N to line 2 and if there is a tank at position 
+    (i, j) and position (i-1, j) is empty and there is more than N - i + 1 tanks from line N to line i (to 
+    check this, we will do: query (N) - query (i-1) = number of tanks from the N-th line to i-th line) move 
+    tank to position (i-1, j) and I add movement to the resp vector and do movs++ (total number of moves). 
+    Let's repeat this algorithm N times as explained above.
+  In Colunms:
+    - The algorithm is analogous for moving the tanks between the columns.
+    
   Time Complexity: O(n³*log2(n))
 */
 
