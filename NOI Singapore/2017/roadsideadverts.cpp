@@ -3,7 +3,7 @@
   
   Let's do an LCA with a DFS and a sparse table and during DFS we will keep the distance from all nodes to the root.
   And for each of the Q queries, we will execute the following algorithm:
-    - We add the distance between the first two cities in w (respo) and lca = LCA between them.
+    - We add the distance between the first two cities in w (respose) and lca = LCA between them.
     - From the 3rd city, we add the distance between the LCA of the cities and the current city and update the LCA 
     between the LCA and the current city. In addition, we need to check if we do not add a few edges more than once, 
     by adding two vertices of the same subtree, we pass by sp (vector containing the cities that have already been 
