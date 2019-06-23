@@ -1,4 +1,5 @@
 /*
+  COCI 2006/2007 Contest #3 - Task Tenkici
   Solution by Samyra Almeida
   
   Note that each tank will move at most N² times (N movements in rows and N movements in columns).
