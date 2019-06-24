@@ -68,7 +68,7 @@ int main()
 			if(num[i][j] == 0 && in[j] == 0)
 			{
 				row.push(j);
-        in[j] = 1;
+        			in[j] = 1;
  			}
 		}
 	}
