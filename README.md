@@ -1,1 +1,1 @@
-# olympics-problems
+olympics-problems
