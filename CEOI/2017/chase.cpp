@@ -1,5 +1,5 @@
 /*
-	CEOI 2017 - Task Chase
+CEOI 2017 - Task Chase
 	Solving by Samyra Almeida
   
 	Some notes: 
@@ -13,8 +13,8 @@
     	- dp[u][i] = maximum difference of the number of pigeons that are seen by Tom and Jerry from the root (first statue of the way) 
 		to the u statue, still having i crumbs, between the childrem of u.
     	
-		- dp2[u][i] = second maximum difference (of a different node than dp[u][i]) of the number of pigeons that are seen by Tom and 
-		Jerry from the root (first statue of the way) to the u statue, still having i crumbs, between the childrem of u.
+		- dp2[u][i] = second maximum difference (of a different node than dp[u][i]) of the number of pigeons that are seen by 
+		Tom and Jerry from the root (first statue of the way) to the u statue, still having i crumbs, between the childrem of u.
     	
 		- the dp's have 2 cases (for all i in range 1 to k), to a node v (child of u): 
 			
@@ -24,8 +24,8 @@
 			- else if dp2[u][i] < max(dp[v][i], dp[v][i] + vis[v] - vet[u]):
 				update the dp2[u][i] = max(dp[v][i], dp[v][i] + vis[v] - vet[u]).
 	
-		*To do the dp's we use a DFS in the tree, but for check the answer is necessary do all nodes as root with runs in O(n*n) and 
-		this solution will receive TLE.
+		*To do the dp's we use a DFS in the tree, but for check the answer is necessary do all nodes as root with runs in O(n*n) 
+		and this solution will receive TLE.
 		
 		So, rotate the tree in a smart way is the solution. But, how? Think a bit about it!
 			- For all node u, do the your children v as root (for all i in range 1 to k): 
@@ -39,13 +39,14 @@
 					- else if dp2[u][i] < max(dp[u][i], dp[u][i] + vis[u] - vet[v]):
 						update the dp2[u][i] = max(dp[u][i], dp[u][i] + vis[u] - vet[v]).
 		  	
-			*To runs the above algorithm do a function much similar to DFS in a tree, and for give the answer, in the top of the 
-			function before go through the children of u, do (for all i in range 1 to k): 
+			*To runs the above algorithm do a function much similar to DFS in a tree, and for give the answer, in the top 
+			of the function before go through the children of u, do (for all i in range 1 to k): 
 		
-				- Do it: ans = max({ans, dp[u][i], dp[u][i-1] + vis[u]}), in the other words, the maximum between the previus answer, the 
-				maximum difference of the number of pigeons that are seen by Tom and Jerry from the u to the some node v in the subtree 
-				of u still having i crumbs and the maximum difference of the number of pigeons that are seen by Tom and Jerry from the u 
-				to the some node v in the subtree of u still having i-1 crumbs (dropped a crumb in the u).
+				- Do it: ans = max({ans, dp[u][i], dp[u][i-1] + vis[u]}), in the other words, the maximum between the 
+				previus answer, the maximum difference of the number of pigeons that are seen by Tom and Jerry from the 
+				u to the some node v in the subtree of u still having i crumbs and the maximum difference of the number 
+				of pigeons that are seen by Tom and Jerry from the u to the some node v in the subtree of u still having
+				i-1 crumbs (dropped a crumb in the u).
 		
 		To finish, just print the ans.
 */
