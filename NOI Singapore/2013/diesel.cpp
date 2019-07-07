@@ -6,7 +6,7 @@
   
   I do a algorithm, very similar to dijkstra, but of maximum way. To go from the cell (x, y) to the neighboring cell (xx, yy):
     - Check that the weight of the truck to the cell (x, y) minus the amount of diesel to go to the cell (xx, yy) is greater 
-    than the value of dist [xx] [yy], if so, update the value of dist [xx] [yy] and add in the queue.
+    than the value of dist [xx] [yy], if so, update the value of dist [xx] [yy] and add in the priority queue.
 */
 
 #include <bits/stdc++.h>
