@@ -1,7 +1,7 @@
 /*
     OBI 2015 - P2 - Fase 2 - Fila
     
-    Assunto: BIT, Segment Tree, Busca na Segment Tree em O(log2(n)), Busca na BIT em O(log2(n))
+    Assunto: BIT, Segment Tree, busca na Segment Tree e busca na BIT em tempo logaritmo
     Complexidade: O((n+q)*log2(n+q))
     
     Solução por Samyra Almeida
