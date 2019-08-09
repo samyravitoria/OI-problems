@@ -1,5 +1,5 @@
 /*
-    OBI 2016 - Fase 2 - Quase Primo
+    OBI 2016 - P2 - Fase 2 - Quase Primo
     
     Assunto: Princípio da Inclusão-Exclusão
     Complexidade: Não sei, sei que passa
