@@ -1,5 +1,6 @@
 /* 
-	OBI 2015 - Fila - Solução para a parcial (40 pontos)
+	OBI 2015 - P2 - Fase 2 - Fila
+	Solução para a parcial (40 pontos)
 
  	Primeiramente, montamos a seg com todos os participantes que ja estão na fila. Vale lembrar que nessa parcial NENHUM novo parcipante entrará 
  	na fila, logo podemo ignorar todas as operações do tipo 0.
