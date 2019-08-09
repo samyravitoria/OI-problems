@@ -16,8 +16,6 @@
  	Solução by Samyra Almeida
 */
 
-
-
 #include <bits/stdc++.h>
 
 using namespace std;
