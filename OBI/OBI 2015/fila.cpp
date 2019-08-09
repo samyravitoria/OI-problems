@@ -1,5 +1,5 @@
 /*
-    OBI 2015 - Fila
+    OBI 2015 - Fase 2 - Fila
     
     Assunto: BIT, Segment Tree, Busca na Segment Tree em O(log2(n)), Busca na BIT em O(log2(n))
     Complexidade: O((n+q)*log2(n+q))
