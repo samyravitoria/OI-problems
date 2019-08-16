@@ -67,7 +67,7 @@ void dfs(int u, int f)
 
 }
 
-int32_t main()
+int main()
 {
 	cin >> n >> s >> k;
 
