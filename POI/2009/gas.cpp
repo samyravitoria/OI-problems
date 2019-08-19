@@ -1,18 +1,39 @@
 /*
-	POI 2009 - Task Fire Extinguishers (gas)
+    POI 2009 - Task Fire Extinguishers (gas)
+    
+    Notes:
+        - qtd[u][i] = number of nodes in u subtree that are at a distance of i corridors of u and were not covered by any extinguisher
+        - rest[u][i] = number of nodes, which are at most i corridors of u, which can still be covered.
 	
-	Notes:
-		- qtd[u][i] = number of nodes in u subtree that are at a distance of i corridors of u and were not covered by any extinguisher
-		- rest[u][i] = number of nodes, which are at most i corridors of u, which can still be covered.
-	
-	Solution: 
-		- To calculate qtd[u][i], for each i between 1 and k, let's do qtd[u][i] + = qtd[v][i-1], for every v belonging to the 
-		subtree of u, because the nodes that were at a distance x-1 from my son is at a distance x from me.
-		- After, to calculate 
+    Solution: 
+        - To calculate qtd[u][i], for each i between 1 and k, let's do qtd[u][i] + = qtd[v][i-1], for every v belonging to the 
+        subtree of u, because the nodes that were at a distance x-1 from my son is at a distance x from me.
+		
+        - Then, if qtd[u][k] > 0, we need to add extinguishers to this node, so we add the required number of extinguishers 
+        to cover the qtd[u][k] nodes. And we added to the rest[u][k] the amount of nodes that can still be covered by these 
+        extinguishers.
+		
+        - So if qtd[u][k] > 0, we need to add fire extinguishers to this node, then variable add will get the number of 
+        extinguishers needed to cover the qtd[u][k] nodes, remember that to do resp += add.
+		
+        - Then we add to the rest[u][k] += add * s, ie the number of nodes that can be covered and that are at most K corridors 
+        away from node u.
+		
+        - Finally, in dfs, for each level i between 0 and k, we try to cover the qtd[u][i] with the rest[u][i].
+		
+        - And then, for every level i between 0 and k-1, we try to cover the qtd[u][i] nodes with the rest[u][i + 1], that is, 
+        with the nodes that can still be covered and are one more distance from the corridor.
 
-	Topic: DP in tree
+        - Finally, after sending an error message, some of which are not at most corridors of node R(root), to do that we just 
+        do a loop in i, where i varies from Kkto 0, and for each interaction we do:
+            * r + = rest[R][i], and if qtd[R][i] > r, we need to add more extinguishers to node R, so we do the same as in DFS,
+            after of if, we do r - = qtd[R][i].
+			
+        - After the loop, just print the variable resp.
 
-	Solved by Samyra Almeida
+    Topic: DP in tree
+
+    Solved by Samyra Almeida
 */
 
 #include <bits/stdc++.h>
