@@ -16,7 +16,7 @@
     - if l > r:  this is impossible and we return 0;
     - if l == r, for any c: we need k-c-1 marbles to delete this subsequence.
   
-  Time Complexity: O(n*n*k)
+  Time Complexity: O(n*n*n*k)
 */
 #include <bits/stdc++.h>
 
