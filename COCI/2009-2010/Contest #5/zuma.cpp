@@ -8,7 +8,7 @@
   
   We will have three cases for each state:
     - Add one element of the first marble in the begin of senquence: dp[l][r][c] = dp[l][r][c+1] + 1.
-    - If c = k-1, we can delete all the on the beginning of sequence including the first marble of 
+    - If c = k-1, we can delete all the marbles on the beginning of sequence including the first marble of 
     subsequence: dp[l][r][c] = dp[l+1][r][0].
     - In this case we try merging the v[l] to another marble v[j], if v[l] = v[j], and in this case we 
     do dp[l][r][c] = dp[l+1][j-1][0] + dp[j][r][min(k-1, c+1)].
