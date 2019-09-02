@@ -1,4 +1,4 @@
-/
+/*
   IOI 2004 - Task Farmer  
   Solution by Samyra Almeida
   
@@ -13,8 +13,11 @@
       After I'll check if dp[i][Q] = 1, the answer is Q, if the dp[i][Q] = 0 else if the answer is Q-1 else I do a greedy 
       algotithm to completely the cypress trees with the strips.
       
-      The only problme with the solution is the matrix dp, because the i <= 2000 and j <= 150000. And the 
-/
+      The only problme with the solution is the matrix dp, because the i <= 2000 and j <= 150000 and it's impossible crate a 
+      matriz with the these dimentions, for solve this I use memory trick.
+  
+  Time Complexity: O(m*q)
+*/
 
 #include <bits/stdc++.h>
 
@@ -22,9 +25,7 @@ using namespace std;
 
 const int maxq = 1.5e5+10, maxn = 2e3+10;
 
-int q, m, k;
-int dp[maxq][2];
-int c[maxn], l[maxn];
+int q, m, k, c[maxn], l[maxn], dp[maxq][2];
 
 int main()
 {
