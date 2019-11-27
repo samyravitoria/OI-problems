@@ -1,3 +1,6 @@
+// Seletiva 2018 - Dia 1 - Amigo Secreto
+// Solution by Samyra Almeida
+
 #include <bits/stdc++.h>
 
 using namespace std;
